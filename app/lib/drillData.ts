@@ -44,7 +44,7 @@ export const drillData = [
     type: "Natural",
     duration: "18 min",
     participants: 423,
-    lastScore: "64%",
+    lastScore: "54%",
     completed: "Not attempted",
     scenarios: 4,
   },

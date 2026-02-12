@@ -107,7 +107,7 @@ export default function StudentDashboard() {
     grade: "10th Grade A",
     school: "Delhi Public School",
     avatar: "/placeholder.svg?height=40&width=40",
-    level: 12,
+    level: 2,
     xp: 2450,
     nextLevelXp: 3000,
     weeklyXp: 350,

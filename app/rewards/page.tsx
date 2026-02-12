@@ -205,7 +205,7 @@ const leaderboard: LeaderboardEntry[] = [
     name: "Rahul Kumar",
     avatar: "/placeholder.svg?height=40&width=40",
     points: 2650,
-    level: 12,
+    level: 2,
     badges: 7,
     rank: 3,
     school: "Bangalore Public School",

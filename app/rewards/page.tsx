@@ -625,7 +625,7 @@ export default function RewardsPage() {
                             </div>
                             <div className="flex items-center gap-3 text-sm text-muted-foreground">
                               <span>Level {entry.level}</span>
-                              <span>{entry.badges} badges</span>
+                              <span>{entry.badges} Badges</span>
                             </div>
                           </div>
                         </div>

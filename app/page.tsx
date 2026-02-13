@@ -6,7 +6,17 @@ import { useState, useEffect } from "react";
 
 
 export default function HomePage() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+useEffect(() => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    setIsLoggedIn(true);
+  }
+}, []);
+
   return (
+    
     
     <div className="min-h-screen">
       <header className="fixed top-0 w-full z-50 glass-effect border-b-2 border-green-500/30 bg-white/95 backdrop-blur-md shadow-lg">

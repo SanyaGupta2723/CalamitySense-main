@@ -2,9 +2,12 @@ import { Shield, Users, BookOpen, AlertTriangle, Trophy, MessageSquare, Sparkles
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
+import { useState, useEffect } from "react";
+
 
 export default function HomePage() {
   return (
+    
     <div className="min-h-screen">
       <header className="fixed top-0 w-full z-50 glass-effect border-b-2 border-green-500/30 bg-white/95 backdrop-blur-md shadow-lg">
         <div className="container mx-auto px-4 py-6">

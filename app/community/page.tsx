@@ -96,7 +96,7 @@ export default function CommunityPage() {
     },
     {
       id: 3,
-      author: "Sneha Reddy",
+      author: "Sanya Gupta",
       avatar: "/teacher-woman.png",
       time: "6 hours ago",
       content:

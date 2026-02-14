@@ -34,7 +34,7 @@ const moduleData: Record<string, ModuleData> = {
     title: "Earthquake Safety Fundamentals",
     description:
       "Learn the basics of earthquake preparedness, including Drop, Cover, and Hold techniques specific to Indian seismic zones.",
-    category: "Earthquake Safety",
+    category : "Earthquake Safety",
     difficulty: "Beginner",
     duration: "25 minutes",
     objectives: [

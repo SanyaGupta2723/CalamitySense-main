@@ -280,7 +280,7 @@ export default function StudentDashboard() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-medium">Flood Emergency Response</h3>
-                      <p className="text-sm text-muted-foreground">Lesson 4 of 6 • 60% complete</p>
+                      <p className="text-sm text-muted-foreground">Lesson 3 of 6 • 60% complete</p>
                       <Progress value={60} className="h-2 mt-2" />
                     </div>
                     <Button asChild>

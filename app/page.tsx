@@ -244,6 +244,46 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="bg-gray-900 text-white px-6 py-16">
+  
+  <div className="max-w-5xl mx-auto text-center">
+    
+    <h2 className="text-3xl font-bold text-green-400 mb-4">
+      About CalamitySense
+    </h2>
+
+    <p className="text-lg mb-6">
+      CalamitySense is a platform focused on building disaster-resilient 
+      communities by spreading awareness and providing essential safety resources.
+    </p>
+
+    <div className="grid md:grid-cols-3 gap-6 mt-8">
+      
+      <div className="bg-gray-800 p-6 rounded-xl shadow-md">
+        <h3 className="text-xl font-semibold text-green-300">🌍 Mission</h3>
+        <p className="mt-2 text-sm">
+          Educating people about disaster preparedness and safety.
+        </p>
+      </div>
+
+      <div className="bg-gray-800 p-6 rounded-xl shadow-md">
+        <h3 className="text-xl font-semibold text-green-300">⚡ Features</h3>
+        <p className="mt-2 text-sm">
+          Awareness content, resources, and community engagement tools.
+        </p>
+      </div>
+
+      <div className="bg-gray-800 p-6 rounded-xl shadow-md">
+        <h3 className="text-xl font-semibold text-green-300">💡 Innovation</h3>
+<p className="mt-2 text-sm">
+  Leveraging technology to spread awareness and improve disaster preparedness.
+</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       <section className="py-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 animate-gradient"></div>

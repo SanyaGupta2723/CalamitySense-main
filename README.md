@@ -10,7 +10,7 @@ The platform focuses on both **Natural** and **Non‑Natural disasters**, ensuri
 
 ---
 
-## Direct Link for the Project Calamitysense
+## Direct Link for the Project
 (https://calamity-sense-ctn7.vercel.app)
 
 ## 🎯 Purpose & Vision

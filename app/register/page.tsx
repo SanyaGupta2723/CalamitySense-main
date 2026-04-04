@@ -1,6 +1,8 @@
 "use client"
 
 import type React from "react"
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { useState } from "react"
 import { Shield, Eye, EyeOff } from "lucide-react"
@@ -208,6 +210,7 @@ export default function RegisterPage() {
                 Create Account
               </Button>
             </form>
+            
 
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">

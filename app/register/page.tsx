@@ -13,8 +13,11 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
+  export default function RegisterPage() {
+  const router = useRouter(); // 👈 YAHI ADD KAR
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [agreeToTerms, setAgreeToTerms] = useState(false) // New state for the checkbox
@@ -38,7 +41,9 @@ export default function RegisterPage() {
     }
     // TODO: Implement registration logic
     console.log("Registration attempt:", finalFormData)
+    
   }
+  
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">

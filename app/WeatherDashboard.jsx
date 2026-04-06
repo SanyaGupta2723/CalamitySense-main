@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const WeatherDashboard = () => {
   const BASE = "https://api.weatherapi.com/v1/current.json";
-  const KEY = "5915b0e40854404188a95848251709";
+  const KEY = "45f77a5c07144fd980e181553260604";
 
   const [query, setQuery] = useState("India");
   const [unit, setUnit] = useState("C");

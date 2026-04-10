@@ -1,6 +1,6 @@
 # 🌪️ CalamitySense
 
-## 🚨 About the Project
+## 🚨 About the Project 
 
 **CalamitySense** is a modern, interactive disaster preparedness and emergency response learning platform designed to help students and individuals **understand, practice, and respond effectively** during real-world calamities.
 

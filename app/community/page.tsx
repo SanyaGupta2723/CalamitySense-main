@@ -26,6 +26,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 export default function CommunityPage() {
   const [activeTab, setActiveTab] = useState("feed")
+  const [newPost, setNewPost] = useState("");
   const userStats = { totalPoints: 2450 } // Mock user stats based on images
 
   const clubs = [
@@ -75,6 +76,7 @@ export default function CommunityPage() {
       time: "2 hours ago",
       content:
         "Just completed the earthquake drill simulation! Got 95% accuracy. The Drop, Cover, Hold technique really works. Thanks to everyone who shared tips! 🏆",
+      liked: false, // ✅ add this
       likes: 24,
       comments: 8,
       shares: 3,
@@ -232,36 +234,66 @@ export default function CommunityPage() {
           </TabsList>
           <TabsContent value="feed" className="space-y-6">
             {/* Create Post */}
-            <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm animate-scale-in">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Plus className="h-5 w-5 text-orange-500" />
-                  Share Your Experience
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Textarea
-                  placeholder="What did you learn today? Share your disaster preparedness tips..."
-                  className="min-h-[100px]"
-                />
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <Badge variant="outline" className="cursor-pointer hover:bg-orange-100">
-                      #earthquake
-                    </Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-cyan-100">
-                      #flood
-                    </Badge>
-                    <Badge variant="outline" className="cursor-pointer hover:bg-red-100">
-                      #fire
-                    </Badge>
-                  </div>
-                  <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600">
-                    Share Post
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+<Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm animate-scale-in">
+  <CardHeader>
+    <CardTitle className="flex items-center gap-2">
+      <Plus className="h-5 w-5 text-orange-500" />
+      Share Your Experience
+    </CardTitle>
+  </CardHeader>
+
+  <CardContent className="space-y-4">
+    {/* Input Area */}
+    <Textarea
+      value={newPost}
+      onChange={(e) => setNewPost(e.target.value)}
+      placeholder="What did you learn today? Share your disaster preparedness tips..."
+      className="min-h-[100px]"
+    />
+
+    <div className="flex items-center justify-between">
+      {/* Tags */}
+      <div className="flex items-center gap-2">
+        <Badge variant="outline" className="cursor-pointer hover:bg-orange-100">
+          #earthquake
+        </Badge>
+        <Badge variant="outline" className="cursor-pointer hover:bg-cyan-100">
+          #flood
+        </Badge>
+        <Badge variant="outline" className="cursor-pointer hover:bg-red-100">
+          #fire
+        </Badge>
+      </div>
+
+      {/* Post Button */}
+      <Button
+        className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
+        onClick={() => {
+          if (!newPost.trim()) return;
+
+          const post = {
+            id: Date.now(),
+            author: "Sanya Gupta",
+            avatar: "/placeholder.svg",
+            time: "Just now",
+            content: newPost,
+            likes: 0,
+            comments: 0,
+            shares: 0,
+            liked: false,
+            club: "General",
+            badges: [],
+          };
+
+          setPosts([post, ...posts]); // add new post at top
+          setNewPost(""); // clear textarea
+        }}
+      >
+        Share Post
+      </Button>
+    </div>
+  </CardContent>
+</Card>
 
             {/* Posts Feed */}
             <div className="space-y-6">
@@ -308,10 +340,25 @@ export default function CommunityPage() {
                     <p className="text-slate-700 mb-4 leading-relaxed">{post.content}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                       <div className="flex items-center gap-6">
-                        <button className="flex items-center gap-2 text-slate-500 hover:text-red-500 transition-colors">
-                          <Heart className="h-4 w-4" />
-                          <span className="text-sm">{post.likes}</span>
-                        </button>
+                        <button
+  onClick={() => {
+    setPosts(
+      posts.map((p) =>
+        p.id === post.id
+          ? {
+              ...p,
+              liked: !p.liked,
+              likes: p.liked ? p.likes - 1 : p.likes + 1,
+            }
+          : p
+      )
+    );
+  }}
+  className="flex items-center gap-2"
+>
+  <Heart className={`h-4 w-4 ${post.liked ? "text-red-500" : ""}`} />
+  {post.likes}
+</button>
                         <button className="flex items-center gap-2 text-slate-500 hover:text-blue-500 transition-colors">
                           <MessageSquare className="h-4 w-4" />
                           <span className="text-sm">{post.comments}</span>

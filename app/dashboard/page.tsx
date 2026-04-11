@@ -102,17 +102,17 @@ export default function StudentDashboard() {
   const [selectedPeriod, setSelectedPeriod] = useState("week")
 
   // Mock user data
-  const user = {
-    name: "Arjun Sharma",
-    grade: "10th Grade A",
-    school: "Delhi Public School",
-    avatar: "/placeholder.svg?height=40&width=40",
-    level: 2,
-    xp: 2450,
-    nextLevelXp: 3000,
-    weeklyXp: 350,
-    weeklyGoal: 500,
-  }
+const user = {
+  name: "Sanya Gupta",
+  grade: "B.Tech 3rd Year",
+  school: "",
+  avatar: "/styles/Sanya.jpg",
+  level: 1,
+  xp: 100,
+  nextLevelXp: 1000,
+  weeklyXp: 50,
+  weeklyGoal: 200,
+}
 
   const stats = {
     modulesCompleted: 4,

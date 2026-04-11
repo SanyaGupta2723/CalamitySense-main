@@ -67,7 +67,7 @@ export default function CommunityPage() {
     },
   ]
 
-  const posts = [
+  const [posts, setPosts] = useState([
     {
       id: 1,
       author: "Priya Sharma",
@@ -107,7 +107,7 @@ export default function CommunityPage() {
       club: "Flood Safety Champions",
       badges: ["Flood Expert", "Mentor"],
     },
-  ]
+  ])
 
   const competitions = [
     {

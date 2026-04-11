@@ -412,14 +412,39 @@ export default function CommunityPage() {
   <Heart className={`h-4 w-4 ${post.liked ? "text-red-500" : ""}`} />
   {post.likes}
 </button>
-                        <button className="flex items-center gap-2 text-slate-500 hover:text-blue-500 transition-colors">
-                          <MessageSquare className="h-4 w-4" />
-                          <span className="text-sm">{post.comments}</span>
-                        </button>
-                        <button className="flex items-center gap-2 text-slate-500 hover:text-green-500 transition-colors">
-                          <Share2 className="h-4 w-4" />
-                          <span className="text-sm">{post.shares}</span>
-                        </button>
+                        {/* Comment Button */}
+<button
+  onClick={() => {
+    setPosts(
+      posts.map((p) =>
+        p.id === post.id
+          ? { ...p, comments: p.comments + 1 }
+          : p
+      )
+    );
+  }}
+  className="flex items-center gap-2 text-slate-500 hover:text-blue-500 transition-colors"
+>
+  <MessageSquare className="h-4 w-4" />
+  <span className="text-sm">{post.comments}</span>
+</button>
+
+{/* Share Button */}
+<button
+  onClick={() => {
+    setPosts(
+      posts.map((p) =>
+        p.id === post.id
+          ? { ...p, shares: p.shares + 1 }
+          : p
+      )
+    );
+  }}
+  className="flex items-center gap-2 text-slate-500 hover:text-green-500 transition-colors"
+>
+  <Share2 className="h-4 w-4" />
+  <span className="text-sm">{post.shares}</span>
+</button>
                       </div>
                     </div>
                   </CardContent>

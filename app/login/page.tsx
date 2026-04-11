@@ -20,10 +20,19 @@ export default function LoginPage() {
   })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // TODO: Implement authentication logic
-    console.log("Login attempt:", formData)
+  e.preventDefault();
+
+  // simple fake validation
+  if (!formData.email || !formData.password || !formData.role) {
+    alert("Please fill all fields");
+    return;
   }
+
+  console.log("Login attempt:", formData);
+
+  // fake login success → redirect
+  window.location.href = "/dashboard";
+};
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">

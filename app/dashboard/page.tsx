@@ -105,7 +105,7 @@ export default function StudentDashboard() {
 const user = {
   name: "Sanya Gupta",
   grade: "B.Tech 3rd Year",
-  school: "",
+  school: "Shir Ramswaroop Memorial University",
   avatar: "/styles/Sanya.jpg",
   level: 1,
   xp: 100,

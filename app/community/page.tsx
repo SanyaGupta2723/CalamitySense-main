@@ -233,7 +233,7 @@ export default function CommunityPage() {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="feed" className="space-y-6">
-            {/* Create Post */}
+           {/* Create Post */}
 <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm animate-scale-in">
   <CardHeader>
     <CardTitle className="flex items-center gap-2">
@@ -294,6 +294,59 @@ export default function CommunityPage() {
     </div>
   </CardContent>
 </Card>
+
+  <CardContent className="space-y-4">
+    {/* Input Area */}
+    <Textarea
+      value={newPost}
+      onChange={(e) => setNewPost(e.target.value)}
+      placeholder="What did you learn today? Share your disaster preparedness tips..."
+      className="min-h-[100px]"
+    />
+
+    <div className="flex items-center justify-between">
+      {/* Tags */}
+      <div className="flex items-center gap-2">
+        <Badge variant="outline" className="cursor-pointer hover:bg-orange-100">
+          #earthquake
+        </Badge>
+        <Badge variant="outline" className="cursor-pointer hover:bg-cyan-100">
+          #flood
+        </Badge>
+        <Badge variant="outline" className="cursor-pointer hover:bg-red-100">
+          #fire
+        </Badge>
+      </div>
+
+      {/* Post Button */}
+      <Button
+        className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
+        onClick={() => {
+          if (!newPost.trim()) return;
+
+          const post = {
+            id: Date.now(),
+            author: "Sanya Gupta",
+            avatar: "/placeholder.svg",
+            time: "Just now",
+            content: newPost,
+            likes: 0,
+            comments: 0,
+            shares: 0,
+            liked: false,
+            club: "General",
+            badges: [],
+          };
+
+          setPosts([post, ...posts]); // add new post at top
+          setNewPost(""); // clear textarea
+        }}
+      >
+        Share Post
+      </Button>
+    </div>
+  </CardContent>
+
 
             {/* Posts Feed */}
             <div className="space-y-6">

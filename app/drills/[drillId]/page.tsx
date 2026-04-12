@@ -187,7 +187,7 @@ export default function DrillPage() {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Drill Not Found</h1>
+          <h1 className="text-2xl font-bold mb-4">Drill in progress</h1>
           <Button asChild>
             <Link href="/drills">Back to Drills</Link>
           </Button>

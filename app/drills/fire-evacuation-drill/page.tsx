@@ -179,11 +179,18 @@ export default function DrillPage() {
   if (!drill) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-xl font-bold mb-4">Drill in Progress</h1>
-          <Button asChild><Link href="/drills">Back</Link></Button>
-        </div>
-      </div>
+  <div className="text-center">
+    <h1 className="text-xl font-bold  border border-black p-6 rounded-lg mb-4">Drill in Progress...</h1>
+
+    <Button 
+      asChild 
+      className="bg-black text-white hover:bg-gray-800 px-4 py-2 rounded"
+    >
+      <Link href="/drills">Back</Link>
+    </Button>
+
+  </div>
+</div>
     )
   }
 

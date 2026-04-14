@@ -536,10 +536,12 @@ export default function CommunityPage() {
                         <Target className="h-4 w-4" />
                         <span className="text-sm font-medium">{competition.deadline}</span>
                       </div>
-                      <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-                        <Zap className="h-4 w-4 mr-2" />
-                        Participate
-                      </Button>
+                      <Button
+  onClick={() => router.push("/participate")}
+  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
+>
+  Participate
+</Button>
                     </div>
                   </CardContent>
                 </Card>

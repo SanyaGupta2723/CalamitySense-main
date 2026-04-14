@@ -18,6 +18,8 @@ import {
   Star,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -25,6 +27,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 
 export default function CommunityPage() {
+  const router = useRouter();
+
   const [activeTab, setActiveTab] = useState("feed")
   const [newPost, setNewPost] = useState("");
   const userStats = { totalPoints: 2450 } // Mock user stats based on images

@@ -215,7 +215,7 @@ npm run start
 
 ---
 
-## 👨‍💻  Developer Note for project
+## 👨‍💻  Developer Note 
 
 **CalamitySense** is developed as an **educational and learning-focused project**, aiming to use technology for social good by improving disaster preparedness and safety awareness.
 

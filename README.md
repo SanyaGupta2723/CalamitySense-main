@@ -153,7 +153,7 @@ http://localhost:3000
 
 ---
 
-### 🏗️ Step 5: Production Build (Optional)
+### 🏗️ Step 5: Production Build (It is Optional)
 
 Create a production build:
 
@@ -223,7 +223,7 @@ npm run start
 
 ## 📄 License
 
-This project is created for the  **educational purposes**. You are free to use it , modify, and enhance it for learning or academic use.
+This project is created for  **educational purposes**. You are free to use , modify, and enhance it for learning or academic use.
 
 ---
 
